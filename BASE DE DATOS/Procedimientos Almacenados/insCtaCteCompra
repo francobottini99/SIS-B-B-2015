@@ -1,0 +1,31 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insCtaCteCompra`(
+	in unnCCC varchar(45),
+	in cdbarCCC varchar(250),
+	in fecCCC date,
+	in tipoCCC varchar(45),
+	in nroCCC varchar(45),
+	in debCCC double,
+	in credCCC double,
+	in saldoCCC double,
+	in idprovCCC int(11)
+	)
+BEGIN
+	INSERT INTO CtaCteCompra (
+		CodUN,
+		CodBarra,
+		Fecha,
+		TipoComprobante,
+		NroComprobante,
+		Debito,
+		Credito,
+		Saldo,
+		Proveedores_idProveedores
+)
+	VALUES (unnCCC, cdbarCCC, fecCCC, tipoCCC, nroCCC, debCCC, credCCC, saldoCCC, idprovCCC);
+END

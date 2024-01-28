@@ -1,0 +1,17 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verCliente`(
+	in unnC varchar(45)
+)
+BEGIN
+	SELECT
+		*
+	FROM
+		Clientes
+	WHERE CodUN = unnC 
+	ORDER BY RazonSocial Asc;
+END

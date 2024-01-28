@@ -1,0 +1,17 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verArticulo`(
+	in unnA varchar(45)
+)
+BEGIN
+	SELECT
+		*
+	FROM
+		Articulos
+	WHERE CodUN = unnA
+	ORDER BY Descripcion Asc;
+END

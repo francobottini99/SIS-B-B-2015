@@ -1,0 +1,23 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `modUsuario`(
+	in idU int,
+	in nombU varchar(250),
+	in catU varchar(45),
+	in contU varchar(250),
+	in estU int
+)
+BEGIN
+	UPDATE Usuarios
+	SET 
+		Nombre = nombU,
+		Categoria = catU,
+		Contraseña = contU,
+		Estado = estU
+	WHERE 
+		idUsuarios = idU;
+END

@@ -1,0 +1,47 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `modProveedor`(
+	in idP int(11),
+	in cdunP varchar(45),
+	in cbP varchar(250),
+	in fecP date,
+	in rsP varchar(250),
+	in dirP varchar(250),
+	in locP varchar(100),
+	in cpP varchar(30),
+	in provP varchar(50),
+	in paisP varchar(100),
+	in teP varchar(250),
+	in cuitP varchar(13),
+	in ibP varchar(10),
+	in cativP varchar(45),
+	in codivP varchar(45),
+	in correP varchar(250),
+	in webP varchar(250),
+	in contP varchar(250),
+	in teconP varchar(250),
+    in usP varchar(250)
+)
+BEGIN
+	UPDATE Proveedores
+	SET 
+		CodUN = cdunP,
+		CodBarra = cbP,
+		FecAlta = fecP,
+		RazonSocial = rsP,
+		Direccion = dirP,
+		Localidad = locP,
+		CP = cpP,
+		Provincia = provP,
+		Pais = paisP,
+		TE = teP,
+		CUIT = cuitP,
+		IIBB = ibP,
+		CategoriaIVA = cativP,
+		CodCategoriaIVA = codivP,
+		CorreoElectronico = correP,
+		PaginaWeb = webP,
+		Contacto = contP,
+		TEContacto = teconP,
+        Usuario = usP
+	WHERE 
+		idProveedores = idP;
+END

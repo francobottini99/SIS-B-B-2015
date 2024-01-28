@@ -1,0 +1,17 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `verStock`(
+	in idartS int(11)
+)
+BEGIN
+	SELECT
+		*
+	FROM
+		Stock
+	WHERE Art_IdArticulos = idartS And EnStock = 1
+	ORDER BY FecAlta Asc;
+END

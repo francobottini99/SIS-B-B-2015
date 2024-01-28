@@ -1,0 +1,20 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insUsuario`(
+	in nombU varchar(250),
+	in catU varchar(45),
+	in contU varchar(250),
+	in estU int
+)
+BEGIN
+	INSERT INTO Usuarios (
+		Nombre,
+		Categoria,
+		Contraseña,
+		Estado)
+	VALUES (nombU, catU, contU, estU);
+END

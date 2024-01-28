@@ -1,0 +1,12 @@
+-- --------------------------------------------------------------------------------
+-- Routine DDL
+-- Note: comments before and after the routine body will not be stored by the server
+-- --------------------------------------------------------------------------------
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `eliCliente`(
+	in idCli int
+)
+BEGIN
+	DELETE FROM Clientes WHERE idClientes = idCli;
+END
