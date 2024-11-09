@@ -1,5 +1,5 @@
-# B&BSI - Sistema de Gestión para la Venta de insumos informáticos
-Este proyecto implementa un sistema de gestión para la venta de insumos informáticos. Facilita la gestión de los clientes, productos, proveedores, ventas, compras, etc. Cuenta con facturación electrónica **AFIP** y permite la generación de reportes y estadísticas. El cliente esta desarrollado utilizando .NET Framework y el lenguaje de programación VB.NET. La base de datos es MySQL.
+# B&BSI - Management System for the Sale of Computer Supplies
+This project implements a management system for the sale of computer supplies. It facilitates the management of customers, products, suppliers, sales, purchases, etc. It includes **AFIP** electronic invoicing and allows the generation of reports and statistics. The client is developed using .NET Framework and the VB.NET programming language. The database is MySQL.
 
-### Autores:
+### Authors:
 - **Bottini, Franco Nicolas**
